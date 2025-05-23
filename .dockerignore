@@ -3,7 +3,6 @@ bin
 .github
 dist
 platforms
-test
 .gitignore
 eslint.config.mjs
 docs
