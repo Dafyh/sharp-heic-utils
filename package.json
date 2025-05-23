@@ -1,0 +1,33 @@
+{
+  "name": "sharp-heic-utils",
+  "version": "1.0.0",
+  "description": "A utility that gives you the tools you need to convert a HEIC file with Sharp.",
+  "bin": {
+    "convert-heic": "./dist/bin/convert.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node --import tsx --test test/server.test.ts",
+    "lint": "eslint src",
+    "build": "rimraf dist && tsc",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "MARTEAU Nicolas <nico_mart@hotmail.fr>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "node-addon-api": "^8.3.1",
+    "node-gyp": "^11.2.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@openally/config.eslint": "^2.1.0",
+    "@openally/config.typescript": "^1.0.3",
+    "@types/node": "^22.15.21",
+    "file-type": "^20.5.0",
+    "rimraf": "^6.0.1",
+    "testcontainers": "^10.27.0",
+    "tsx": "^4.19.4"
+  }
+}

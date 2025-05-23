@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "rootDirs": ["."],
+    "outDir": "./dist",
+    "target": "ESNext"
+  },
+  "extends": "@openally/config.typescript/esm",
+  "include": ["./*.ts", "bin/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

@@ -1,0 +1,27 @@
+name: Test HEIC conversion on Linux platforms
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  platform-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform:
+          - alpine
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image for ${{ matrix.platform }}
+        run: |
+          docker build -t heic-convert-${{ matrix.platform }} -f ./platforms/${{ matrix.platform }}/Dockerfile .
+
+      - name: Run tests in ${{ matrix.platform }} container
+        run: |
+          docker run --rm -p 8800:8800 heic-convert-${{ matrix.platform }} npm run test
