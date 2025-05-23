@@ -13,6 +13,12 @@ Before use this package, make sure you have the following tools installed on you
 * [**Docker**](https://docs.docker.com/engine/install/)
 
 ## 🚀 Getting started
+1. Clone the project
+```bash
+$ git clone https://github.com/Dafyh/sharp-heic-utils.git 
+$ cd sharp-heic-utils
+$ npm i
+```
 
 1. **Build the Docker image** ⤵️
 ```bash
@@ -33,11 +39,12 @@ $ docker build -f ./platforms/windows/Dockerfile -t heic-convert .
 ```bash
 $ docker run --rm -p 8800:8800 heic-convert
 ```
+> To close the server and the container, use Ctrl + C.
 
 3. **Use the CLI** ⤵️  
 
 
-In the other terminal and on the root of the project :
+In the **other terminal** and on the **root of the project** :
 ```bash
 $ npm link
 $ convert-heic ./test/file.heic
