@@ -25,13 +25,13 @@ $ npm i
 # Alpine
 $ docker build -f ./platforms/alpine/Dockerfile -t heic-convert .
 
-# Debian
+# Or Debian
 $ docker build -f ./platforms/debian/Dockerfile -t heic-convert .
 
-# Ubuntu
+# Or Ubuntu
 $ docker build -f ./platforms/ubuntu/Dockerfile -t heic-convert .
 
-# Windows
+# Or Windows
 $ docker build -f ./platforms/windows/Dockerfile -t heic-convert .
 ```
 
