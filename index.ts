@@ -24,6 +24,7 @@ const server = http
         }
       }));
       setImmediate(() => fs.unlink(outputName));
+      console.log(`${new Date().toISOString()} :`, "error ❌");
 
       return;
     }
@@ -33,6 +34,7 @@ const server = http
     finished(stream, () => fs.unlink(outputName));
 
     await pipeline(stream, response);
+    console.log(`${new Date().toISOString()} :`, "success ✅");
   })
   .listen(8800, () => console.log("Server start on port 8800 🚀"));
 
