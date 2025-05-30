@@ -19,7 +19,7 @@ RUN apt-get update && \
     python3 && \
     apt-get clean all
 
-RUN curl -fsSL https://deb.nodesource.com/setup_23.x | bash - && apt-get install -y nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && apt-get install -y nodejs
 
 RUN wget https://github.com/libvips/libvips/releases/download/v${VIPS_VERSION}/vips-${VIPS_VERSION}.tar.xz && \
     tar -xf vips-${VIPS_VERSION}.tar.xz && \

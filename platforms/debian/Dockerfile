@@ -1,4 +1,4 @@
-FROM node:24-bullseye
+FROM node:22-bullseye
 LABEL maintainer="Nicolas Marteau <nico_mart@hotmail.fr>"
 
 ARG VIPS_VERSION="8.16.1"
