@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./docs/logo.jpg"/>
+<img src="./docs/image.jpg"/>
 </p>
 
 # 🥦 Sharp-heic-utils
